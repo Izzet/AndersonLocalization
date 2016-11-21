@@ -1,0 +1,160 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        h1 {font-family: "Liberation sans"; margin : 0 0 0 0;}
+        h2 {font-family: "Liberation sans"; margin : 0 0 0 0;}
+        p {margin : 0 0 10 0}
+        #page {position: absolute; left : 10px; top : 10px; width: 420mm; height: 297mm; background-color: #EEEEEE}
+        .mainTitle {position : absolute; left : 160mm; top : 5mm; width : 100mm; text-align: center;}
+        .introduction, .waveEvolution, .specifications, .conclusion {font-family: "Liberation sans"; font-size : 100%}
+        .introduction {position: absolute; left : 5mm; top : 20mm; width: 140mm;}
+        .waveEvolution {position : absolute; left : 150mm; top : 20mm; width : 265mm;}
+        .waveEvolutionImg {height : 60mm}
+        .specifications {position : absolute; left : 5mm; top : 141mm; width : 140mm;}
+        .conclusion {position : absolute; left : 150mm; top : 250mm; width: 265mm;}
+        .references {position : absolute; left : 10px; top : 307mm; background-color : #EEEEEE; width : 420mm; height: 297mm; font-family : "Liberation Sans"}
+    </style>
+    <title>Anderson Localization Factsheet</title>
+</head>
+<body>
+    <div id="page">
+        <div class="mainTitle">
+            <h1>Anderson localization</h1>
+        </div>
+        <div class="introduction" >
+            <h2>Wave propagation</h2>
+            <p>
+            Anderson Localization is intrinsically wave phenomena, so, lets start
+            with common example - a stone thrown into the water. This causes a ripple
+            to spread accross the water surface, travelling in all directions until it fades
+            away. </p>
+            <p>
+            Now imagine a different surface, where several small rocks peek
+            above the water level. When we throw our stone now in between these
+            "impurities", wave is scattered
+            off the rocks and creates more complex pattern. Also, it takes a longer time
+            for some ripples to get further away from the point of stone impact.</p>
+            <p>
+            Anderson localization very generally describes similar phenomena. It predicts
+            that certain amplitude in a medium only decays with time if the medium
+            is not very chaotic - mainly consists of either flat or periodic structures. If the
+            medium contains many impurities (pebbles), without friction, the amplitude
+            of the wave at the place might not decay at all!</p>
+            <p>
+            Originally (in P. W. Anderson's article <i> Absence of diffusion in certain random lattices</i> 
+            from 1958), the Anderson localization was derived from Schrödinger equation,
+            thus applying mainly to quantum particles. However, the same physics can be applied
+            to a general wave, and we can observe Anderson localization in many situations. </p>
+        </div>
+        
+        <div class="waveEvolution">
+            <h2>Wave diffusion</h2>
+            <p>
+            To better visualize Anderson localization, simple computer simulations of behaviour of 
+            quantum particles - matter waves are presented below. The Schrödinger equation (equation ruling
+            the motion in quantum mechanics) was used to model a particle spreading from the
+            original position (marked by blue line) over time. The particle is represented here by
+            a probability density, which, at every point, is proportional to the probability of observing
+            the particle at said point. At the beginning, the particle is known to be at some starting position,
+            so the probability density peaks highly at the starting point. After some time, particle 
+            can be somewhere else as well - probability density is more spread. The width of this spread
+            is what concerns us here. </p>
+            
+            <img src="constant_100s_30C2_0.025V.png" class="waveEvolutionImg">
+            <img src="periodic_100s_30C2_0.025V.png" class="waveEvolutionImg">
+            <img src="random_100s_30C2_0.025V.png" class="waveEvolutionImg"> <br>
+            
+            <img src="constant_300s_30C2_0.025V.png" class="waveEvolutionImg">
+            <img src="periodic_300s_30C2_0.025V.png" class="waveEvolutionImg">
+            <img src="random_300s_30C2_0.025V.png" class="waveEvolutionImg"> <br>
+            <p>
+            The images at the top were taken before the images at the bottom. Furthemore, the
+            potential energy of the particle in the region has different profiles, shown in the lower
+            part of the picture. </p>
+            <p>
+            The probability density of the particle at the constant and periodic potential keeps spreading, while
+            the particle at random potential does not spread nearly as much. In fact, if we looked
+            at how the probability density will look in very long time, only the random potential
+            will have noticible peaks, in the other two situations, the particle will spread out much more - 
+            the particle wave undergoes diffusion.</p>
+            <p>
+            Here, the random potential is completly random, which makes it easy to observe the localization
+            in early simulation time. But, the potential does not need to be completly random. If there are only
+            small random variations in the potential, the wave still localizes in one dimension, only the localization
+            length grows.</p>
+            <p>
+            For classical systems, we would have to start from a different wave equation, but it turns out
+            that the Anderson localization works similarly for classical waves. And as some of the properties
+            of localization, such as Anderson transition, have predictions that are irrespective of the specific
+            system, the same computational predictions can be verified by observations of both classical and
+            quantum systems, which has also been done. </p>
+        </div>
+        
+        <div class="specifications">
+            <h2>Current status</h2>
+            <p>
+            Since its theoretical prediction, Anderson localization has been applied to several different
+            problems. First, and perhaps the one that it was originally supposed to solve, was 
+            explanation of conductivity, or, in fact, the lack thereof, of certain materials. If the atoms
+            in the material are effectively in one line or one plane (system has only 1 or 2 dimensions),
+            the localization occurs even for very small disorder - very small random fluctuations of
+            potential energy due to impurities. If the atoms are in whole space (3 dimensions), than there
+            is certain amount of randomness beyond which the electrons in the material never diffuse.
+            When the disorder is crossing this amount, we talk about Anderson transition. Interestingly, 
+            Anderson transition predicts an explicit form of dependence of maximum width of the wave (called
+            localization length) on the amount of disorder in the system, which does not depend on the
+            inner structure of the system - the phenomena is common for different types of waves.</p>
+            <p>
+            Then, one would expect to find some
+            classical system where the transition occurs as well, and indeed the same observation has also
+            been made for ultrasound in disorder lattice of small aluminum beads. </p>
+            <p>
+            The localization of sound can be then used in designing a sound insulation - 
+            the waves cannot diffuse in a disordered insulation, and are effectively trapped in it
+            until they dissappear due to dissipative effects. </p>
+            <p>
+            But even though more than fifty years have passed since the original article, there
+            are still unsolved questions in the field. For example, what happens, when we take into account
+            the interaction of electrons with themselves in the lattice? Or if we can measure localization
+            of mechanical waves, could we perhaps measure localization of seismic waves? And what about
+            very cold atoms - by de Broglie relation, they have quite a big wavelength, could we perhaps
+            localize them? Active research is still going on as of creation of this factsheet and the field is still
+            very much alive. </p>
+        </div>
+        
+        <div class="conclusion">
+            <h2>Further reading</h2>
+            <p>
+            And how exactly can one show that waves localize in such way? Unfortunately, rigid derivation
+            of these results requires more advanced mathematics, such as Laplace transforms and solution
+            of Schrödinger wave equation, so it is not given here. If the reader is interested in this type
+            of derivation, the original Anderson's article is quite extensive in description of the mathematical
+            method. Also, <a href="http://indico.ictp.it/event/a09171/session/5/contribution/3/material/0/0.pdf">this</a>
+            site provides a handfull introduction and comparisson to classical particle diffusion
+            (http://indico.ictp.it/event/a09171/session/5/contribution/3/material/0/0.pdf).</p>
+            <p>
+            Also, for more complete summary of the progress in the field in the last 50 years, visit
+            <a href="http://ps.nano-cops.com/sites/default/files/Fifty%20years%20of%20Anderson%20localization.pdf">this</a>
+            site, where the not so well known areas of the subject are also mentioned
+            (http://ps.nano-cops.com/sites/default/files/Fifty%20years%20of%20Anderson%20localization.pdf).</p>
+            
+        </div>
+    </div>
+    
+    <div class="references">
+        This factsheet was produced with help of following works:
+        <ul>
+            <li>P. W. Anderson, <i>Absence of Diffusion in certain random lattices</i>, Phys. Rev. <b>109</b>, 1492 (1958)</li>
+            <li>A. Lagendijk, B. v. Tiggelen, D. S. Wiersma, <i>Fifty years of Anderson localization</i>, Phys. Today, <b>62</b>, 8, 24 (2009), <br>
+            <i>retreived from : </i>http://ps.nano-cops.com/sites/default/files/Fifty%20years%20of%20Anderson%20localization.pdf (20.11.2016)</li>
+            <li>C. H. Hodges, <i>Confinement of vibration by structural irregularity</i>, J. Sound. Vib., <b>82</b>, 8, 411 (1982)</li>
+            <li>B. Altshuler, <i>Anderson localization - introduction</i>, online resource, <i>retreived from : </i> <br>
+            http://indico.ictp.it/event/a09171/session/5/contribution/3/material/0/0.pdf (20.11.2016)</li>
+            <li>Figures created for this factsheet, code (even though rather disordered) available at https://github.com/Izzet/AndersonLocalization</li>
+            <li>H. Hu <i>et al.</i>, <i>Localization of ultrasound in a three-dimensional elastic network</i>, Nature Physics, <b>4</b>, 945 (2008)</li>
+            <li>T. Brandes & S. Kettemann, <i>Anderson localization and its ramifications : disorder, phase coherence and electron correlations</i> (Springer, Berlin, 2003)</li>
+        </ul>
+    </div>
+</body>
+</html>
